@@ -12,6 +12,7 @@ using Microsoft.Xna.Framework.Media;
 using Microsoft.Devices.Sensors;
 using Microsoft.Phone.Controls;
 using Microsoft.Devices;
+using System.Threading;
 
 
 namespace Prototype1
@@ -26,7 +27,13 @@ namespace Prototype1
 
         PlayerObject player1;
         TargetObject target1;
-        
+        int max_points;
+        int min_points;
+
+        int levelCount;
+
+
+        int player1_scoreCount;
         //VibrateController
 
         
@@ -46,9 +53,13 @@ namespace Prototype1
             TargetElapsedTime = TimeSpan.FromTicks(333333);
 
 
+
             TouchPanel.EnabledGestures = GestureType.Flick;
 
-            
+            levelCount = 0;
+            max_points = 9001;
+            min_points = 1000;
+            player1_scoreCount = 0;
             
         }
 
@@ -76,15 +87,15 @@ namespace Prototype1
 
             player1 = new PlayerObject(Content.Load<Texture2D>("Sprites/stone_64"));
             player1.scoreFont = Content.Load<SpriteFont>("Fonts/player1scoreFont");
-            player1.position = new Vector2(200, 600);
+            player1.position = new Vector2(200, 700);
             
 
             target1 = new TargetObject(Content.Load<Texture2D>("Sprites/target_128_green"));
             target1.texOff = Content.Load<Texture2D>("Sprites/target_128");
-            target1.position = new Vector2(200, 100);
-
-            
-
+            target1.position = new Vector2(200, 50);
+            target1.isAlive = true;
+            levelCount = 0;
+            LoadLevel(0);
         }
 
 
@@ -112,13 +123,17 @@ namespace Prototype1
             player1.UpdatePV();
             player1.WallBounce(screenWidth, screenHeight);
 
-            target1.UpdatePV();
-            target1.HandlePlayerInside(player1);
-            target1.HandlePlayerCollision(player1);
-            //if(target1.CheckInside(player1.rect))
-            //    this.Exit();
 
-            
+            if (target1.isAlive)
+            {
+                target1.UpdatePV();
+                target1.HandlePlayerInside(player1);
+                target1.HandlePlayerCollision(player1);
+                //if(target1.CheckInside(player1.rect))
+                //    this.Exit();
+            }
+
+            HandleGameFlow();
 
 
             base.Update(gameTime);
@@ -151,15 +166,85 @@ namespace Prototype1
 
             while (TouchPanel.IsGestureAvailable)
             {
-
-                GestureSample gs = TouchPanel.ReadGesture();
-
-                player1.velocity = gs.Delta;
+                if (player1.isFlicked == false)
+                {
+                    GestureSample gs = TouchPanel.ReadGesture();
+                    player1.velocity = gs.Delta;
+                    player1.isFlicked = true;
+                    break;
+                }
                 break;
-
             }
 
+        }
 
+
+
+        private void HandleGameFlow()
+        {
+            if (player1.isFlicked)///Wait until stonr is moving
+            {
+
+                if (player1.score < min_points && player1.velocity.Length() == 0)
+                {
+                    Thread.Sleep(500);
+                    // levelCount++;
+                    //  player1_scoreCount += player1.score;
+                    player1.score = 0;
+                    player1.isScoring = false;
+                    target1.isAlive = false;
+
+                    LoadLevel(levelCount);
+                }
+
+
+                else if (player1.score > max_points || player1.velocity.Length() ==0)
+                {
+                    Thread.Sleep(500);
+                    levelCount++;
+                    player1_scoreCount += player1.score;
+                    player1.score = 0;
+                    player1.isScoring = false;
+                    target1.isAlive = false;
+                    
+                    LoadLevel(levelCount);
+                }
+
+                
+            }
+
+        }
+
+        private void LoadLevel(int lvl)
+        {
+            switch (lvl)
+            {
+
+                case (0):
+                    player1.isScoring = false;
+                    player1.position = new Vector2(200, 700);
+                    target1.position = new Vector2(200, 50);
+                    player1.isFlicked = false;
+
+                    target1.isAlive = true;
+                    target1.isInsideMe = false;
+                    target1.isTouchingMe = false;
+                    break;
+
+
+                case(1):
+                    player1.isScoring = false;
+                    player1.position = new Vector2(320, 720);
+                    target1.position = new Vector2(0, 0);
+                    player1.isFlicked = false;
+
+                    target1.isAlive = true;
+                    target1.isInsideMe = false;
+                    target1.isTouchingMe = false;
+                    break;
+
+                    
+            }
 
         }
 

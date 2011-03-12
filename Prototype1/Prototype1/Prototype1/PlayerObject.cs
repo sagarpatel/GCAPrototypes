@@ -22,12 +22,18 @@ namespace Prototype1
         public Vector2 scorePosition;
         public bool isScoring;
 
+        public bool isFlicked;
+
+        public float minVelocity;
+
         public PlayerObject(Texture2D tex):base( tex)
         {
             bounceCount = 0;
             score = 0;
             isScoring = false;
             scorePosition = new Vector2(position.X, position.Y + 20f);
+            isFlicked = false;
+            minVelocity = 200f;
            // radius = radius / 2;
         }
 
@@ -36,6 +42,10 @@ namespace Prototype1
         {
             base.UpdatePV();
             scorePosition = new Vector2(position.X + radius, position.Y - 50f);
+            if (velocity.Length() < minVelocity)
+            {
+                velocity = new Vector2(0, 0);
+            }
         }
 
 

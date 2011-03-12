@@ -88,6 +88,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="GameObject.cs" />
+    <Compile Include="ObstacleObject.cs" />
     <Compile Include="PlayerObject.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TargetObject.cs" />

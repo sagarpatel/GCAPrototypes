@@ -27,7 +27,6 @@ namespace Prototype1
             isTouchingMe = false;
             texOn = tex;
 
-           
         }
 
         public override void UpdatePV()
@@ -39,10 +38,13 @@ namespace Prototype1
         public override void Draw(SpriteBatch spriteBatch)
         {
             //base.Draw(spriteBatch);
-            if (isInsideMe || isTouchingMe)
-                spriteBatch.Draw(texOn, position, Color.White);
-            else
-                spriteBatch.Draw(texOff, position, Color.White);
+            if (isAlive)
+            {
+                if (isInsideMe || isTouchingMe)
+                    spriteBatch.Draw(texOn, position, Color.White);
+                else
+                    spriteBatch.Draw(texOff, position, Color.White);
+            }
 
         }
 
@@ -81,7 +83,7 @@ namespace Prototype1
             }
             else
             {
-                player.isScoring = false;
+             //   player.isScoring = false;
                 isInsideMe = false;
             }
        
@@ -102,7 +104,7 @@ namespace Prototype1
             }
             else
             {
-                player.isScoring = false;
+              //  player.isScoring = false;
                 isTouchingMe = false;
             }
 
