@@ -10,6 +10,15 @@
       <Output>C:\Users\Sagar\Documents\GameDev\CGAPrototypes\GCAPrototypes\Prototype1\Prototype1\Prototype1\bin\Windows Phone\Debug\Content\Sprites\enemy1V1.xnb</Output>
       <Time>2011-03-11T17:46:10.4176759-05:00</Time>
     </Item>
+    <Item>
+      <Source>Sprites\gsq.png</Source>
+      <Name>Sprites\gsq</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Sagar\Documents\GameDev\CGAPrototypes\GCAPrototypes\Prototype1\Prototype1\Prototype1\bin\Windows Phone\Debug\Content\Sprites\gsq.xnb</Output>
+      <Time>2011-03-11T22:57:16.2054536-05:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>WindowsPhone</TargetPlatform>

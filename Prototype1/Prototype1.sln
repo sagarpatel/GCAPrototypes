@@ -3,22 +3,40 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prototype1", "Prototype1\Prototype1\Prototype1.csproj", "{73BA2276-BF91-48CD-9DF4-AC8DD7EAB38F}"
 EndProject
-Project("{96E2B04D-8817-42C6-938A-82C39BA4D311}") = "Prototype1Content", "Prototype1\Prototype1Content\Prototype1Content.contentproj", "{AA65561B-3368-487E-B065-46866C9DD2E3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prototype1Content", "Prototype1\Prototype1Content\Prototype1Content.contentproj", "{AA65561B-3368-487E-B065-46866C9DD2E3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Mixed Platforms = Debug|Mixed Platforms
 		Debug|Windows Phone = Debug|Windows Phone
+		Debug|Xbox 360 = Debug|Xbox 360
+		Release|Mixed Platforms = Release|Mixed Platforms
 		Release|Windows Phone = Release|Windows Phone
+		Release|Xbox 360 = Release|Xbox 360
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{73BA2276-BF91-48CD-9DF4-AC8DD7EAB38F}.Debug|Mixed Platforms.ActiveCfg = Debug|Windows Phone
+		{73BA2276-BF91-48CD-9DF4-AC8DD7EAB38F}.Debug|Mixed Platforms.Build.0 = Debug|Windows Phone
+		{73BA2276-BF91-48CD-9DF4-AC8DD7EAB38F}.Debug|Mixed Platforms.Deploy.0 = Debug|Windows Phone
 		{73BA2276-BF91-48CD-9DF4-AC8DD7EAB38F}.Debug|Windows Phone.ActiveCfg = Debug|Windows Phone
 		{73BA2276-BF91-48CD-9DF4-AC8DD7EAB38F}.Debug|Windows Phone.Build.0 = Debug|Windows Phone
 		{73BA2276-BF91-48CD-9DF4-AC8DD7EAB38F}.Debug|Windows Phone.Deploy.0 = Debug|Windows Phone
+		{73BA2276-BF91-48CD-9DF4-AC8DD7EAB38F}.Debug|Xbox 360.ActiveCfg = Debug|Windows Phone
+		{73BA2276-BF91-48CD-9DF4-AC8DD7EAB38F}.Debug|Xbox 360.Build.0 = Debug|Windows Phone
+		{73BA2276-BF91-48CD-9DF4-AC8DD7EAB38F}.Release|Mixed Platforms.ActiveCfg = Release|Windows Phone
+		{73BA2276-BF91-48CD-9DF4-AC8DD7EAB38F}.Release|Mixed Platforms.Build.0 = Release|Windows Phone
+		{73BA2276-BF91-48CD-9DF4-AC8DD7EAB38F}.Release|Mixed Platforms.Deploy.0 = Release|Windows Phone
 		{73BA2276-BF91-48CD-9DF4-AC8DD7EAB38F}.Release|Windows Phone.ActiveCfg = Release|Windows Phone
 		{73BA2276-BF91-48CD-9DF4-AC8DD7EAB38F}.Release|Windows Phone.Build.0 = Release|Windows Phone
 		{73BA2276-BF91-48CD-9DF4-AC8DD7EAB38F}.Release|Windows Phone.Deploy.0 = Release|Windows Phone
+		{73BA2276-BF91-48CD-9DF4-AC8DD7EAB38F}.Release|Xbox 360.ActiveCfg = Release|Windows Phone
+		{73BA2276-BF91-48CD-9DF4-AC8DD7EAB38F}.Release|Xbox 360.Build.0 = Release|Windows Phone
+		{AA65561B-3368-487E-B065-46866C9DD2E3}.Debug|Mixed Platforms.ActiveCfg = Debug|Windows Phone
 		{AA65561B-3368-487E-B065-46866C9DD2E3}.Debug|Windows Phone.ActiveCfg = Debug|Windows Phone
+		{AA65561B-3368-487E-B065-46866C9DD2E3}.Debug|Xbox 360.ActiveCfg = Debug|Windows Phone
+		{AA65561B-3368-487E-B065-46866C9DD2E3}.Release|Mixed Platforms.ActiveCfg = Release|Windows Phone
 		{AA65561B-3368-487E-B065-46866C9DD2E3}.Release|Windows Phone.ActiveCfg = Release|Windows Phone
+		{AA65561B-3368-487E-B065-46866C9DD2E3}.Release|Xbox 360.ActiveCfg = Release|Windows Phone
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

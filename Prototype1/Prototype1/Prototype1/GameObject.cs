@@ -23,40 +23,64 @@ namespace Prototype1
         public Vector2 velocity;
 
         public float speed;
+        //public float gravity;
+        public float scale;
+        public float rotation;
+        public float friction;
 
-        public GameObject()
+        public Rectangle rect;
+
+
+        public GameObject(Texture2D tex)
         {
+            texture = tex;
+
             isAlive = false;
             position = new Vector2(0, 0);
             velocity = new Vector2(0, 0);
 
             speed = 0.005f;
+            scale = 1.0f;
+            rotation = 0.0f;
+          //  gravity = 9.8f;
+            friction = 0.01f;
+
+            rect = new Rectangle((int)position.X, (int)position.Y, texture.Width, texture.Height);
+
 
         }
 
 
         public void Draw(SpriteBatch spriteBatch)
         {
-            spriteBatch.Draw(texture, position, Color.White);
+            //spriteBatch.Draw(texture, position, Color.White);
+            spriteBatch.Draw(texture, position, null, Color.White, rotation, new Vector2(0, 0), scale, SpriteEffects.None, 0);
+            
 
         }
 
         public void UpdatePV()
         {
-
+            velocity = (1 - friction) * velocity;
             position += velocity * speed;
+            rect = new Rectangle((int)position.X, (int)position.Y, texture.Width, texture.Height);
+
+          
         }
+
 
         public void WallBounce( int W, int H)
         {
             if ((position.X + texture.Width) > W || position.X < 0)
             {
                 velocity.X = -velocity.X;
+                //scale -= 0.2f;
             }
 
             if ((position.Y + texture.Height) > H || position.Y < 0)
             {
                 velocity.Y = -velocity.Y;
+              //  scale -= 0.2f;
             }
 
 

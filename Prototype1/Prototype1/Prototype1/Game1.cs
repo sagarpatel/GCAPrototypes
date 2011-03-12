@@ -20,7 +20,8 @@ namespace Prototype1
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 
-        GameObject player1;
+        PlayerObject player1;
+        TargetObject target1;
 
         int screenHeight;
         int screenWidth;
@@ -62,10 +63,14 @@ namespace Prototype1
             
             // TODO: use this.Content to load your game content here
 
-            player1 = new GameObject();
-            player1.texture = Content.Load<Texture2D>("Sprites/enemy1V1");
-            player1.position = new Vector2(100, 100);
+            player1 = new PlayerObject(Content.Load<Texture2D>("Sprites/enemy1V1"));
 
+            player1.position = new Vector2(200, 400);
+
+
+            target1 = new TargetObject(Content.Load<Texture2D>("Sprites/gsq"));
+     
+            target1.position = new Vector2(0, 0);
 
 
         }
@@ -95,7 +100,9 @@ namespace Prototype1
             player1.UpdatePV();
             player1.WallBounce(screenWidth, screenHeight);
 
-
+            target1.UpdatePV();
+            if(target1.CheckInside(player1.rect))
+                this.Exit();
 
             base.Update(gameTime);
         }
@@ -111,6 +118,7 @@ namespace Prototype1
             spriteBatch.Begin(SpriteSortMode.BackToFront, BlendState.AlphaBlend);
 
             player1.Draw(spriteBatch);
+            target1.Draw(spriteBatch);
 
             spriteBatch.End();
 
