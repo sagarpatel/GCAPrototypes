@@ -55,7 +55,7 @@ namespace Prototype1
         {
             base.Draw(spriteBatch);
             
-            if(isScoring)
+            if(isFlicked)
                 spriteBatch.DrawString(scoreFont, score.ToString(), scorePosition, Color.Orchid);
         }
 

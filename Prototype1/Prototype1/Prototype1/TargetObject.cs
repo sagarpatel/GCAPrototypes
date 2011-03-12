@@ -83,7 +83,7 @@ namespace Prototype1
             }
             else
             {
-             //   player.isScoring = false;
+                player.isScoring = false;
                 isInsideMe = false;
             }
        
@@ -104,7 +104,7 @@ namespace Prototype1
             }
             else
             {
-              //  player.isScoring = false;
+                player.isScoring = false;
                 isTouchingMe = false;
             }
 

@@ -182,23 +182,10 @@ namespace Prototype1
 
         private void HandleGameFlow()
         {
-            if (player1.isFlicked)///Wait until stonr is moving
+            if (player1.isFlicked )///Wait until stonr is moving
             {
 
-                if (player1.score < min_points && player1.velocity.Length() == 0)
-                {
-                    Thread.Sleep(500);
-                    // levelCount++;
-                    //  player1_scoreCount += player1.score;
-                    player1.score = 0;
-                    player1.isScoring = false;
-                    target1.isAlive = false;
-
-                    LoadLevel(levelCount);
-                }
-
-
-                else if (player1.score > max_points || player1.velocity.Length() ==0)
+                if (player1.score > max_points)
                 {
                     Thread.Sleep(500);
                     levelCount++;
@@ -206,9 +193,43 @@ namespace Prototype1
                     player1.score = 0;
                     player1.isScoring = false;
                     target1.isAlive = false;
-                    
+
                     LoadLevel(levelCount);
+
                 }
+
+
+                if ((player1.score < min_points) && (player1.velocity.Length() == 0))
+                {
+                    if(player1.isScoring==false)
+                    {
+                        Thread.Sleep(500);
+                        // levelCount++;
+                        //  player1_scoreCount += player1.score;
+                        player1.score = 0;
+                        player1.isScoring = false;
+                        target1.isAlive = false;
+
+                        LoadLevel(levelCount);
+                    }
+                }
+
+
+                else if ((player1.score> min_points)&&(player1.velocity.Length()==0)) 
+                {
+                    if (player1.isScoring == false)
+                    {
+                        Thread.Sleep(500);
+                        levelCount++;
+                        player1_scoreCount += player1.score;
+                        player1.score = 0;
+                        player1.isScoring = false;
+                        target1.isAlive = false;
+
+                        LoadLevel(levelCount);
+                    }
+                }
+                
 
                 
             }
