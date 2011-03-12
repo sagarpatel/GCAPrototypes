@@ -17,12 +17,41 @@ namespace Prototype1
 
         public int bounceCount;
 
+        public int score;
+        public SpriteFont scoreFont;
+        public Vector2 scorePosition;
+        public bool isScoring;
+
         public PlayerObject(Texture2D tex):base( tex)
         {
-         
-
             bounceCount = 0;
+            score = 0;
+            isScoring = false;
+            scorePosition = new Vector2(position.X, position.Y + 20f);
+           // radius = radius / 2;
         }
+
+
+        public override void UpdatePV()
+        {
+            base.UpdatePV();
+            scorePosition = new Vector2(position.X + radius, position.Y - 50f);
+        }
+
+
+
+
+        public override void Draw(SpriteBatch spriteBatch)
+        {
+            base.Draw(spriteBatch);
+            
+            if(isScoring)
+                spriteBatch.DrawString(scoreFont, score.ToString(), scorePosition, Color.Orchid);
+        }
+
+
+
+        
 
     }
 }

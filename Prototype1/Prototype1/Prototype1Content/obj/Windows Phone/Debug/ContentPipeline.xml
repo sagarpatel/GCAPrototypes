@@ -2,22 +2,49 @@
 <XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline">
   <Asset Type="Pipeline:BuildItemCollection">
     <Item>
-      <Source>Sprites\enemy1V1.png</Source>
-      <Name>Sprites\enemy1V1</Name>
+      <Source>Sprites\stone.png</Source>
+      <Name>Sprites\stone</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Sagar\Documents\GameDev\CGAPrototypes\GCAPrototypes\Prototype1\Prototype1\Prototype1\bin\Windows Phone\Debug\Content\Sprites\enemy1V1.xnb</Output>
-      <Time>2011-03-11T17:46:10.4176759-05:00</Time>
+      <Output>C:\Users\Sagar\Documents\GameDev\CGAPrototypes\GCAPrototypes\Prototype1\Prototype1\Prototype1\bin\Windows Phone\Debug\Content\Sprites\stone.xnb</Output>
+      <Time>2011-03-12T10:31:30.0483877-05:00</Time>
     </Item>
     <Item>
-      <Source>Sprites\gsq.png</Source>
-      <Name>Sprites\gsq</Name>
+      <Source>Sprites\stone_64.png</Source>
+      <Name>Sprites\stone_64</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Sagar\Documents\GameDev\CGAPrototypes\GCAPrototypes\Prototype1\Prototype1\Prototype1\bin\Windows Phone\Debug\Content\Sprites\gsq.xnb</Output>
-      <Time>2011-03-11T22:57:16.2054536-05:00</Time>
+      <Output>C:\Users\Sagar\Documents\GameDev\CGAPrototypes\GCAPrototypes\Prototype1\Prototype1\Prototype1\bin\Windows Phone\Debug\Content\Sprites\stone_64.xnb</Output>
+      <Time>2011-03-12T10:34:09.9195319-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Fonts\player1scoreFont.spritefont</Source>
+      <Name>Fonts\player1scoreFont</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Sagar\Documents\GameDev\CGAPrototypes\GCAPrototypes\Prototype1\Prototype1\Prototype1\bin\Windows Phone\Debug\Content\Fonts\player1scoreFont.xnb</Output>
+      <Time>2011-03-12T10:50:30.765633-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\target_128_green.png</Source>
+      <Name>Sprites\target_128_green</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Sagar\Documents\GameDev\CGAPrototypes\GCAPrototypes\Prototype1\Prototype1\Prototype1\bin\Windows Phone\Debug\Content\Sprites\target_128_green.xnb</Output>
+      <Time>2011-03-12T11:16:29.630795-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\target_128.png</Source>
+      <Name>Sprites\target_128</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Sagar\Documents\GameDev\CGAPrototypes\GCAPrototypes\Prototype1\Prototype1\Prototype1\bin\Windows Phone\Debug\Content\Sprites\target_128.xnb</Output>
+      <Time>2011-03-12T11:26:33.6233414-05:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

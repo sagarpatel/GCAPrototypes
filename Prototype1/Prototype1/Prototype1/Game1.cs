@@ -23,6 +23,8 @@ namespace Prototype1
         PlayerObject player1;
         TargetObject target1;
 
+        
+
         int screenHeight;
         int screenWidth;
 
@@ -66,15 +68,16 @@ namespace Prototype1
             
             // TODO: use this.Content to load your game content here
 
-            player1 = new PlayerObject(Content.Load<Texture2D>("Sprites/enemy1V1"));
-
+            player1 = new PlayerObject(Content.Load<Texture2D>("Sprites/stone_64"));
+            player1.scoreFont = Content.Load<SpriteFont>("Fonts/player1scoreFont");
             player1.position = new Vector2(200, 600);
+            
 
+            target1 = new TargetObject(Content.Load<Texture2D>("Sprites/target_128_green"));
+            target1.texOff = Content.Load<Texture2D>("Sprites/target_128");
+            target1.position = new Vector2(200, 100);
 
-            target1 = new TargetObject(Content.Load<Texture2D>("Sprites/gsq"));
-     
-            target1.position = new Vector2(0, 0);
-
+            
 
         }
 
@@ -104,11 +107,13 @@ namespace Prototype1
             player1.WallBounce(screenWidth, screenHeight);
 
             target1.UpdatePV();
+            target1.HandlePlayerInside(player1);
+            target1.HandlePlayerCollision(player1);
             //if(target1.CheckInside(player1.rect))
             //    this.Exit();
 
-            if (target1.CheckInside(player1.center, player1.radius))
-                this.Exit();
+            
+
 
             base.Update(gameTime);
         }
@@ -125,6 +130,7 @@ namespace Prototype1
 
             player1.Draw(spriteBatch);
             target1.Draw(spriteBatch);
+           // spriteBatch.DrawString(player1.scoreFont, player1.score.ToString(), player1.scorePosition, Color.Orchid);
 
             spriteBatch.End();
 

@@ -52,11 +52,11 @@ namespace Prototype1
 
             center = new Vector2(position.X + texture.Width / 2, position.Y + texture.Height / 2);
 
-            radius = texture.Width;
+            radius = texture.Width/2;
         }
 
 
-        public void Draw(SpriteBatch spriteBatch)
+        public virtual void Draw(SpriteBatch spriteBatch)
         {
             //spriteBatch.Draw(texture, position, Color.White);
             spriteBatch.Draw(texture, position, null, Color.White, rotation, new Vector2(0, 0), scale, SpriteEffects.None, 0);
@@ -64,7 +64,7 @@ namespace Prototype1
 
         }
 
-        public void UpdatePV()
+        public virtual void UpdatePV()
         {
             velocity = (1 - friction) * velocity;
             position += velocity * speed;
@@ -95,11 +95,16 @@ namespace Prototype1
         {
             float dist = Vector2.Distance(center, othercenter);
 
-            if (dist < radius)
+            if (dist < radius+otherradius)
                 return true;
             else
                 return false;
         }
+    }
+
+
+
+        
 
 
 
@@ -108,5 +113,3 @@ namespace Prototype1
 
 
 
-
-}

@@ -14,14 +14,36 @@ namespace Prototype1
 {
     class TargetObject:GameObject
     {
+        public bool isInsideMe;
+        public bool isTouchingMe;
 
-     
+        public Texture2D texOn;
+        public Texture2D texOff;
+
 
         public TargetObject(Texture2D tex):base( tex)
         {
+            isInsideMe = false;
+            isTouchingMe = false;
+            texOn = tex;
 
            
-            
+        }
+
+        public override void UpdatePV()
+        {
+            base.UpdatePV();
+            //CheckInside(player);
+        }
+
+        public override void Draw(SpriteBatch spriteBatch)
+        {
+            //base.Draw(spriteBatch);
+            if (isInsideMe || isTouchingMe)
+                spriteBatch.Draw(texOn, position, Color.White);
+            else
+                spriteBatch.Draw(texOff, position, Color.White);
+
         }
 
 
@@ -43,6 +65,50 @@ namespace Prototype1
             else
                 return false;
        
+        }
+
+
+        public void HandlePlayerInside(PlayerObject player)
+        {
+            Vector2 othercenter = player.center;
+            float otherradius = player.radius;
+
+            if (CheckInside(othercenter, otherradius))
+            {
+                isInsideMe = true;
+                player.isScoring = true;
+                player.score += 100;
+            }
+            else
+            {
+                player.isScoring = false;
+                isInsideMe = false;
+            }
+       
+
+        }
+
+
+        public void HandlePlayerCollision(PlayerObject player)
+        {
+            Vector2 othercenter = player.center;
+            float otherradius = player.radius;
+
+            if (CheckCircleCollision(othercenter, otherradius))
+            {
+                player.score += 10;
+                player.isScoring = true;
+                isTouchingMe = true;
+            }
+            else
+            {
+                player.isScoring = false;
+                isTouchingMe = false;
+            }
+
+            
+
+
         }
 
 
