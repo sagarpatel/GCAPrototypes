@@ -89,9 +89,19 @@ namespace Prototype1
               //  scale -= 0.2f;
             }
 
-
-
         }
+
+        public bool CheckCircleCollision(Vector2 othercenter, float otherradius)
+        {
+            float dist = Vector2.Distance(center, othercenter);
+
+            if (dist < radius)
+                return true;
+            else
+                return false;
+        }
+
+
 
     }
 

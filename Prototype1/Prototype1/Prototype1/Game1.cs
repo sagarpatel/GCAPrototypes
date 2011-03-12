@@ -31,6 +31,9 @@ namespace Prototype1
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
 
+            graphics.PreferredBackBufferWidth = 480;
+            graphics.PreferredBackBufferHeight = 800;
+
             // Frame rate is 30 fps by default for Windows Phone.
             TargetElapsedTime = TimeSpan.FromTicks(333333);
 
@@ -65,7 +68,7 @@ namespace Prototype1
 
             player1 = new PlayerObject(Content.Load<Texture2D>("Sprites/enemy1V1"));
 
-            player1.position = new Vector2(200, 400);
+            player1.position = new Vector2(200, 600);
 
 
             target1 = new TargetObject(Content.Load<Texture2D>("Sprites/gsq"));

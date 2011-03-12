@@ -34,16 +34,15 @@ namespace Prototype1
 
         }
 
-        public bool CheckInside(Vector2 othercenter, float radius)
+        public bool CheckInside(Vector2 othercenter, float otherradius)
         {
             float dist = Vector2.Distance(center, othercenter);
 
-            if (dist < center.Length())
+            if (otherradius + dist < radius) //checks if other is inside of this
                 return true;
             else
                 return false;
-
-
+       
         }
 
 
