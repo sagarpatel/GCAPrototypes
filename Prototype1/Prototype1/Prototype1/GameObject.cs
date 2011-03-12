@@ -22,6 +22,9 @@ namespace Prototype1
         public Vector2 position;
         public Vector2 velocity;
 
+        public Vector2 center;
+        public float radius;
+
         public float speed;
         //public float gravity;
         public float scale;
@@ -47,7 +50,9 @@ namespace Prototype1
 
             rect = new Rectangle((int)position.X, (int)position.Y, texture.Width, texture.Height);
 
+            center = new Vector2(position.X + texture.Width / 2, position.Y + texture.Height / 2);
 
+            radius = texture.Width;
         }
 
 
@@ -64,6 +69,7 @@ namespace Prototype1
             velocity = (1 - friction) * velocity;
             position += velocity * speed;
             rect = new Rectangle((int)position.X, (int)position.Y, texture.Width, texture.Height);
+            center = new Vector2(position.X + texture.Width / 2, position.Y + texture.Height / 2);
 
           
         }

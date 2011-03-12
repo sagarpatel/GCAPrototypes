@@ -101,7 +101,10 @@ namespace Prototype1
             player1.WallBounce(screenWidth, screenHeight);
 
             target1.UpdatePV();
-            if(target1.CheckInside(player1.rect))
+            //if(target1.CheckInside(player1.rect))
+            //    this.Exit();
+
+            if (target1.CheckInside(player1.center, player1.radius))
                 this.Exit();
 
             base.Update(gameTime);

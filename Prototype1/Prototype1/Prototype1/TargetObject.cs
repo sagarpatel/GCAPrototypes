@@ -34,6 +34,18 @@ namespace Prototype1
 
         }
 
+        public bool CheckInside(Vector2 othercenter, float radius)
+        {
+            float dist = Vector2.Distance(center, othercenter);
+
+            if (dist < center.Length())
+                return true;
+            else
+                return false;
+
+
+        }
+
 
     }
 }
