@@ -17,9 +17,14 @@ namespace Prototype1
 
         public float inertia;
 
+        public double last_time;
+
+        public double checkcooldown;
+
         public ObstacleObject(Texture2D tex):base(tex)
         {
             inertia = 1.0f; //1.0 means max does not move
+            checkcooldown = 1000;
         }
 
 
@@ -32,17 +37,28 @@ namespace Prototype1
         }
 
 
-        public void HandlePlayerCollision(PlayerObject player)
+        public void HandlePlayerCollision(PlayerObject player, GameTime gameTime)
         {
-
-            if (CheckPlayerCollision(player))
+            if (gameTime.TotalGameTime.TotalMilliseconds > last_time + checkcooldown)
             {
-                Vector2 normal = new Vector2((float)Math.Sin((double)rotation),
-                                             (float)Math.Cos((double)rotation));
-                normal.Normalize();
+                if (CheckPlayerCollision(player))
+                {
+                    last_time = gameTime.TotalGameTime.TotalMilliseconds;
 
-                velocity += (1f-inertia) * player.velocity;
-                Vector2.Reflect(player.velocity, normal);
+                    Vector2 colDir = center - player.center;
+                    colDir.Normalize();
+
+                    if (colDir.X > 0 && colDir.Y < 0)///Upper right
+                        player.velocity.Y = -player.velocity.Y;
+                    if (colDir.X > 0 && colDir.Y > 0)///Bottom right
+                        player.velocity.Y = -player.velocity.Y;
+
+                    if (colDir.X < 0 && colDir.Y < 0) ///Upper left
+                        player.velocity.X = -player.velocity.X;
+                    if (colDir.X < 0 && colDir.Y > 0) /// Bottom left
+                        player.velocity.X = -player.velocity.X;
+
+                }
             }
 
         }

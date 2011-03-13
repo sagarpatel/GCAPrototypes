@@ -58,8 +58,11 @@ namespace Prototype1
 
         public virtual void Draw(SpriteBatch spriteBatch)
         {
+            
             //spriteBatch.Draw(texture, position, Color.White);
-            spriteBatch.Draw(texture, position, null, Color.White, rotation, new Vector2(0, 0), scale, SpriteEffects.None, 0);
+
+            if(isAlive)
+                spriteBatch.Draw(texture, position, null, Color.White, rotation, new Vector2(0, 0), scale, SpriteEffects.None, 0);
             
 
         }

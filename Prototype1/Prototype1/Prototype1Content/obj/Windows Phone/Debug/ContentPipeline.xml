@@ -46,6 +46,15 @@
       <Output>C:\Users\Sagar\Documents\GameDev\CGAPrototypes\GCAPrototypes\Prototype1\Prototype1\Prototype1\bin\Windows Phone\Debug\Content\Sprites\target_128.xnb</Output>
       <Time>2011-03-12T11:26:33.6233414-05:00</Time>
     </Item>
+    <Item>
+      <Source>Sprites\over9000.png</Source>
+      <Name>Sprites\over9000</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Sagar\Documents\GameDev\CGAPrototypes\GCAPrototypes\Prototype1\Prototype1\Prototype1\bin\Windows Phone\Debug\Content\Sprites\over9000.xnb</Output>
+      <Time>2011-03-12T20:05:15.9639478-05:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>WindowsPhone</TargetPlatform>

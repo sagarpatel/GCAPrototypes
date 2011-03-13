@@ -27,6 +27,10 @@ namespace Prototype1
 
         PlayerObject player1;
         TargetObject target1;
+
+        ObstacleObject obz1;
+
+
         int max_points;
         int min_points;
 
@@ -88,14 +92,18 @@ namespace Prototype1
             player1 = new PlayerObject(Content.Load<Texture2D>("Sprites/stone_64"));
             player1.scoreFont = Content.Load<SpriteFont>("Fonts/player1scoreFont");
             player1.position = new Vector2(200, 700);
-            
+            player1.isAlive = true;
 
             target1 = new TargetObject(Content.Load<Texture2D>("Sprites/target_128_green"));
             target1.texOff = Content.Load<Texture2D>("Sprites/target_128");
             target1.position = new Vector2(200, 50);
             target1.isAlive = true;
+
+            obz1 = new ObstacleObject(Content.Load<Texture2D>("Sprites/over9000"));
+            obz1.isAlive = false; 
+
             levelCount = 0;
-            LoadLevel(0);
+            LoadLevel(2);
         }
 
 
@@ -133,6 +141,13 @@ namespace Prototype1
                 //    this.Exit();
             }
 
+
+            if (obz1.isAlive)
+            {
+                obz1.UpdatePV();
+                obz1.HandlePlayerCollision(player1,gameTime);
+            }
+
             HandleGameFlow();
 
 
@@ -151,6 +166,10 @@ namespace Prototype1
 
             player1.Draw(spriteBatch);
             target1.Draw(spriteBatch);
+
+            
+
+            obz1.Draw(spriteBatch);
            // spriteBatch.DrawString(player1.scoreFont, player1.score.ToString(), player1.scorePosition, Color.Orchid);
 
             spriteBatch.End();
@@ -264,7 +283,19 @@ namespace Prototype1
                     target1.isTouchingMe = false;
                     break;
 
-                    
+                case (2):
+                    player1.isScoring = false;
+                    player1.position = new Vector2(200, 720);
+                    target1.position = new Vector2(200, 50);
+                    player1.isFlicked = false;
+
+                    target1.isAlive = true;
+                    target1.isInsideMe = false;
+                    target1.isTouchingMe = false;
+
+                    obz1.isAlive = true;
+                    obz1.position = new Vector2(200, 500);
+                    break; 
             }
 
         }
