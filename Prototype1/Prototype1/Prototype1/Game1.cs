@@ -14,6 +14,9 @@ using Microsoft.Phone.Controls;
 using Microsoft.Devices;
 using System.Threading;
 
+using Box2D.XNA;
+
+
 
 namespace Prototype1
 {
@@ -38,14 +41,17 @@ namespace Prototype1
 
         int levelCount;
 
-
         int player1_scoreCount;
         //VibrateController
 
-        
-
+ 
         int screenHeight;
         int screenWidth;
+
+
+        World world;
+
+        float ScaleFactor;
 
         public Game1()
         {
@@ -58,14 +64,15 @@ namespace Prototype1
             // Frame rate is 30 fps by default for Windows Phone.
             TargetElapsedTime = TimeSpan.FromTicks(333333);
 
-
-
             TouchPanel.EnabledGestures = GestureType.Flick;
 
             levelCount = 0;
             max_points = 9001;
             min_points = 1000;
             player1_scoreCount = 0;
+
+
+            ScaleFactor = 0.01f;
             
         }
 
@@ -74,6 +81,8 @@ namespace Prototype1
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
+
+            
 
             base.Initialize();
         }
@@ -93,8 +102,10 @@ namespace Prototype1
 
             player1 = new PlayerObject(Content.Load<Texture2D>("Sprites/curling_ball"));
             player1.scoreFont = Content.Load<SpriteFont>("Fonts/player1scoreFont");
-            player1.position = new Vector2(200, 700);
+            //player1.position = new Vector2(200, 700);
             player1.isAlive = true;
+            
+
 
             target1 = new TargetObject(Content.Load<Texture2D>("Sprites/target_128_green"));
             target1.texOff = Content.Load<Texture2D>("Sprites/target_128");
@@ -108,6 +119,15 @@ namespace Prototype1
 
             levelCount = 0;
             LoadLevel(2);
+
+
+            world = new World(new Vector2(0, 10), true);
+
+            player1.ball =  player1.CreateBall(world, ScaleFactor);
+            player1.ball.Position = new Vector2(1, 1);
+
+
+
         }
 
 
@@ -132,7 +152,7 @@ namespace Prototype1
 
             HandleInputs();
 
-            player1.UpdatePV();
+            player1.UpdatePV_Player(ScaleFactor);
             player1.WallBounce(screenWidth, screenHeight);
 
 
@@ -169,15 +189,21 @@ namespace Prototype1
             spriteBatch.Begin(SpriteSortMode.BackToFront, BlendState.AlphaBlend);
 
            //priteBatch.Draw(bg1, new Vector2(0, 0), Color.White);
-            spriteBatch.Draw(bg1, new Vector2(0, 0), null, Color.White, 0f, new Vector2(0, 0), 0.5f, SpriteEffects.None,1f);
+         
+            
+          //  spriteBatch.Draw(bg1, new Vector2(0, 0), null, Color.White, 0f, new Vector2(0, 0), 0.5f, SpriteEffects.None,1f);
 
 
-            player1.Draw(spriteBatch);
-            target1.Draw(spriteBatch);
+            player1.DrawPlayer(spriteBatch, ScaleFactor);
+
+         //   player1.Draw(spriteBatch);
+
+
+         //   target1.Draw(spriteBatch);
 
             
 
-            obz1.Draw(spriteBatch);
+        //    obz1.Draw(spriteBatch);
            // spriteBatch.DrawString(player1.scoreFont, player1.score.ToString(), player1.scorePosition, Color.Orchid);
 
             spriteBatch.End();

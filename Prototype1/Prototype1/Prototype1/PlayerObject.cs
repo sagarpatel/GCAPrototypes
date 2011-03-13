@@ -10,6 +10,9 @@ using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Input.Touch;
 using Microsoft.Xna.Framework.Media;
 
+using Box2D.XNA;
+
+
 namespace Prototype1
 {
     class PlayerObject:GameObject
@@ -25,6 +28,9 @@ namespace Prototype1
         public bool isFlicked;
 
         public float minVelocity;
+        public Body ball;
+
+   
 
         public PlayerObject(Texture2D tex):base( tex)
         {
@@ -38,9 +44,12 @@ namespace Prototype1
         }
 
 
-        public override void UpdatePV()
+        public void UpdatePV_Player(float ScaleFactor)
         {
-            base.UpdatePV();
+            //base.UpdatePV();
+
+            position = ball.GetPosition() / ScaleFactor;
+
             scorePosition = new Vector2(position.X + radius, position.Y - 50f);
             if (velocity.Length() < minVelocity)
             {
@@ -51,12 +60,51 @@ namespace Prototype1
 
 
 
-        public override void Draw(SpriteBatch spriteBatch)
+        public void DrawPlayer(SpriteBatch spriteBatch,float ScaleFactor)
         {
-            base.Draw(spriteBatch);
-            
+           // base.Draw(spriteBatch);
+
+
+            spriteBatch.Draw(texture, position, null, Color.White, ball.Rotation,
+
+                                 new Vector2(texture.Width / 2f, texture.Height / 2f), 1, SpriteEffects.None,0);
+
+
             if(isFlicked)
                 spriteBatch.DrawString(scoreFont, score.ToString(), scorePosition, Color.Orchid);
+        }
+
+
+        public Body CreateBall(World world, float ScaleFactor)
+        {
+
+            var bodyDef = new BodyDef();
+
+            bodyDef.type = BodyType.Dynamic;
+
+            var ballShape = new CircleShape();
+
+            ballShape._radius = (texture.Width / 2f) * ScaleFactor;
+
+            var ballFixture = new FixtureDef();
+
+            ballFixture.friction = 0.0f; // no friction
+
+            ballFixture.restitution = 1.0f; // give the ball a perfect bounce
+
+            ballFixture.density = 1.0f;
+
+            ballFixture.shape = ballShape;
+
+            var ballBody = world.CreateBody(bodyDef);
+
+            ballBody.CreateFixture(ballFixture);
+
+            // ballBody.Position = new Vector2(((float)r.NextDouble() * 4.5f + .3f), (float)r.NextDouble() * 4.5f + .3f);
+
+            //ballBodies.Add(ballBody);
+
+            return ballBody;
         }
 
 

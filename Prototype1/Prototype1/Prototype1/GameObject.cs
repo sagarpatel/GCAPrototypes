@@ -10,6 +10,7 @@ using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Input.Touch;
 using Microsoft.Xna.Framework.Media;
 
+
 namespace Prototype1
 {
     class GameObject
@@ -33,6 +34,7 @@ namespace Prototype1
 
         public Rectangle rect;
 
+  
 
         public GameObject(Texture2D tex)
         {
@@ -49,10 +51,9 @@ namespace Prototype1
             friction = 0.01f;
 
             rect = new Rectangle((int)position.X, (int)position.Y, texture.Width, texture.Height);
-
             center = new Vector2(position.X + texture.Width / 2, position.Y + texture.Height / 2);
-
             radius = texture.Width/2;
+
         }
 
 
@@ -69,8 +70,10 @@ namespace Prototype1
 
         public virtual void UpdatePV()
         {
-            velocity -= friction * velocity; //takes too long to slow down
+
             
+            velocity -= friction * velocity; //takes too long to slow down
+
             position += velocity * speed;
             rect = new Rectangle((int)position.X, (int)position.Y, texture.Width, texture.Height);
             center = new Vector2(position.X + texture.Width / 2, position.Y + texture.Height / 2);
@@ -104,6 +107,12 @@ namespace Prototype1
             else
                 return false;
         }
+
+
+
+      
+
+
     }
 
 
