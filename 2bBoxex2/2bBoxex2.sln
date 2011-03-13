@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2bBoxex2", "2bBoxex2\2bBoxex2\2bBoxex2.csproj", "{1CA76CE1-96AC-4AE8-8F9D-616668F57E61}"
+EndProject
+Project("{96E2B04D-8817-42C6-938A-82C39BA4D311}") = "2bBoxex2Content", "2bBoxex2\2bBoxex2Content\2bBoxex2Content.contentproj", "{6E0567BA-D07D-4282-AE5E-3177C7424897}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Box2D.XNA_WP7", "..\box2dxna_WP7\box2dxna_WP7\Box2D.XNA_WP7\Box2D.XNA_WP7.csproj", "{A5913511-18BA-4507-80E9-E15CE5E5840E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Windows Phone = Debug|Windows Phone
+		Release|Windows Phone = Release|Windows Phone
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1CA76CE1-96AC-4AE8-8F9D-616668F57E61}.Debug|Windows Phone.ActiveCfg = Debug|Windows Phone
+		{1CA76CE1-96AC-4AE8-8F9D-616668F57E61}.Debug|Windows Phone.Build.0 = Debug|Windows Phone
+		{1CA76CE1-96AC-4AE8-8F9D-616668F57E61}.Debug|Windows Phone.Deploy.0 = Debug|Windows Phone
+		{1CA76CE1-96AC-4AE8-8F9D-616668F57E61}.Release|Windows Phone.ActiveCfg = Release|Windows Phone
+		{1CA76CE1-96AC-4AE8-8F9D-616668F57E61}.Release|Windows Phone.Build.0 = Release|Windows Phone
+		{1CA76CE1-96AC-4AE8-8F9D-616668F57E61}.Release|Windows Phone.Deploy.0 = Release|Windows Phone
+		{6E0567BA-D07D-4282-AE5E-3177C7424897}.Debug|Windows Phone.ActiveCfg = Debug|Windows Phone
+		{6E0567BA-D07D-4282-AE5E-3177C7424897}.Release|Windows Phone.ActiveCfg = Release|Windows Phone
+		{A5913511-18BA-4507-80E9-E15CE5E5840E}.Debug|Windows Phone.ActiveCfg = Debug|Windows Phone
+		{A5913511-18BA-4507-80E9-E15CE5E5840E}.Debug|Windows Phone.Build.0 = Debug|Windows Phone
+		{A5913511-18BA-4507-80E9-E15CE5E5840E}.Release|Windows Phone.ActiveCfg = Release|Windows Phone
+		{A5913511-18BA-4507-80E9-E15CE5E5840E}.Release|Windows Phone.Build.0 = Release|Windows Phone
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

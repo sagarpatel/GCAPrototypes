@@ -1,0 +1,17 @@
+C:\Users\Sagar\Documents\GameDev\2bBoxex2\2bBoxex2\2bBoxex2\bin\Windows Phone\Debug\Content\Sprites\curling_ball.xnb
+C:\Users\Sagar\Documents\GameDev\2bBoxex2\2bBoxex2\2bBoxex2\bin\Windows Phone\Debug\2bBoxex2.dll
+C:\Users\Sagar\Documents\GameDev\2bBoxex2\2bBoxex2\2bBoxex2\bin\Windows Phone\Debug\2bBoxex2.pdb
+C:\Users\Sagar\Documents\GameDev\2bBoxex2\2bBoxex2\2bBoxex2\bin\Windows Phone\Debug\Box2D.XNA_WP7.dll
+C:\Users\Sagar\Documents\GameDev\2bBoxex2\2bBoxex2\2bBoxex2\bin\Windows Phone\Debug\Box2D.XNA_WP7.pdb
+C:\Users\Sagar\Documents\GameDev\2bBoxex2\2bBoxex2\2bBoxex2\obj\Windows Phone\Debug\ResolveAssemblyReference.cache
+C:\Users\Sagar\Documents\GameDev\2bBoxex2\2bBoxex2\2bBoxex2\obj\Windows Phone\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Sagar\Documents\GameDev\2bBoxex2\2bBoxex2\2bBoxex2\obj\Windows Phone\Debug\2bBoxex2.dll
+C:\Users\Sagar\Documents\GameDev\2bBoxex2\2bBoxex2\2bBoxex2\obj\Windows Phone\Debug\2bBoxex2.pdb
+C:\Users\Sagar\Documents\GameDev\2bBoxex2\2bBoxex2\2bBoxex2\bin\Windows Phone\Debug\AppManifest.xaml
+C:\Users\Sagar\Documents\GameDev\2bBoxex2\2bBoxex2\2bBoxex2\obj\Windows Phone\Debug\WMAppManifest.xml.g
+C:\Users\Sagar\Documents\GameDev\2bBoxex2\2bBoxex2\2bBoxex2\obj\Windows Phone\Debug\WMAppManifest.xml
+bin\Windows Phone\Debug\GameThumbnail.png
+C:\Users\Sagar\Documents\GameDev\2bBoxex2\2bBoxex2\2bBoxex2\bin\Windows Phone\Debug\2bBoxex2.xap
+C:\Users\Sagar\Documents\GameDev\2bBoxex2\2bBoxex2\2bBoxex2\obj\Windows Phone\Debug\XapCacheFile.xml
+C:\Users\Sagar\Documents\GameDev\2bBoxex2\2bBoxex2\2bBoxex2\bin\Windows Phone\Debug\Content\Sprites\Brick_400x100_Side.xnb
+C:\Users\Sagar\Documents\GameDev\2bBoxex2\2bBoxex2\2bBoxex2\bin\Windows Phone\Debug\Content\Sprites\Brick_400x100_Up.xnb

@@ -1,0 +1,3 @@
+Content\Sprites\curling_ball.xnb
+Content\Sprites\Brick_400x100_Side.xnb
+Content\Sprites\Brick_400x100_Up.xnb
