@@ -117,16 +117,16 @@ namespace Prototype1
 
             bg1 = Content.Load<Texture2D>("Sprites/Level_4");
 
-            levelCount = 0;
-            LoadLevel(2);
+            
 
 
-            world = new World(new Vector2(0, 10), true);
+            world = new World(new Vector2(0, 0), true);
 
             player1.ball =  player1.CreateBall(world, ScaleFactor);
-            player1.ball.Position = new Vector2(1, 1);
+           // player1.ball.Position = new Vector2(1, 1);
 
-
+            levelCount = 0;
+            LoadLevel(0);
 
         }
 
@@ -153,7 +153,7 @@ namespace Prototype1
             HandleInputs();
 
             player1.UpdatePV_Player(ScaleFactor);
-            player1.WallBounce(screenWidth, screenHeight);
+          //  player1.WallBounce(screenWidth, screenHeight);
 
 
             if (target1.isAlive)
@@ -174,6 +174,8 @@ namespace Prototype1
 
             HandleGameFlow();
 
+            world.Step( 1/60f, 1, 1);
+         //   world.ClearForces();
 
             base.Update(gameTime);
         }
@@ -191,19 +193,19 @@ namespace Prototype1
            //priteBatch.Draw(bg1, new Vector2(0, 0), Color.White);
          
             
-          //  spriteBatch.Draw(bg1, new Vector2(0, 0), null, Color.White, 0f, new Vector2(0, 0), 0.5f, SpriteEffects.None,1f);
+            spriteBatch.Draw(bg1, new Vector2(0, 0), null, Color.White, 0f, new Vector2(0, 0), 0.5f, SpriteEffects.None,1f);
 
 
             player1.DrawPlayer(spriteBatch, ScaleFactor);
 
+            //spriteBatch.DrawString(player1.scoreFont, player1.isFlicked.ToString(), new Vector2(200,200), Color.Yellow);
          //   player1.Draw(spriteBatch);
 
 
-         //   target1.Draw(spriteBatch);
+            target1.Draw(spriteBatch);
 
-            
-
-        //    obz1.Draw(spriteBatch);
+           
+           obz1.Draw(spriteBatch);
            // spriteBatch.DrawString(player1.scoreFont, player1.score.ToString(), player1.scorePosition, Color.Orchid);
 
             spriteBatch.End();
@@ -222,7 +224,18 @@ namespace Prototype1
                 if (player1.isFlicked == false)
                 {
                     GestureSample gs = TouchPanel.ReadGesture();
-                    player1.velocity = gs.Delta;
+                    //player1.velocity = gs.Delta;
+                    Vector2 pos = player1.ball.GetPosition();
+                    
+                    //spriteBatch.Begin(SpriteSortMode.BackToFront, BlendState.AlphaBlend);
+                    //spriteBatch.DrawString(player1.scoreFont,"TESSSSSSSS",player1.position,Color.Red);
+                    //spriteBatch.End();
+                    //player1.velocity = gs.Delta*player1.speed;
+                player1.ball.SetLinearVelocity(gs.Delta * ScaleFactor * player1.speed);
+                    //player1.ball.ApplyLinearImpulse(gs.Delta*ScaleFactor * player1.speed, pos );
+
+                   // player1.ball.ApplyLinearImpulse(new Vector2(1, 1), pos);
+
                     player1.isFlicked = true;
                     break;
                 }
@@ -297,10 +310,11 @@ namespace Prototype1
 
                 case (0):
                     player1.isScoring = false;
-                    player1.position = new Vector2(200, 700);
-                    target1.position = new Vector2(200, 50);
+                   // player1.position = new Vector2(200, 700);
+                    player1.ball.Position = new Vector2(2, 7);
                     player1.isFlicked = false;
 
+                    target1.position = new Vector2(200, 50);
                     target1.isAlive = true;
                     target1.isInsideMe = false;
                     target1.isTouchingMe = false;

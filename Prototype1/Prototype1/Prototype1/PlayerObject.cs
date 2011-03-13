@@ -41,6 +41,8 @@ namespace Prototype1
             isFlicked = false;
             minVelocity = 200f;
            // radius = radius / 2;
+
+            speed = 0.1f;
         }
 
 
@@ -48,13 +50,25 @@ namespace Prototype1
         {
             //base.UpdatePV();
 
-            position = ball.GetPosition() / ScaleFactor;
+            position = ball.GetPosition() / ScaleFactor;  // seting pos into pixel
+           // position += velocity;
+
+            rect = new Rectangle((int)position.X, (int)position.Y, texture.Width, texture.Height);
+            center = new Vector2(position.X + texture.Width / 2, position.Y + texture.Height / 2);
+
 
             scorePosition = new Vector2(position.X + radius, position.Y - 50f);
             if (velocity.Length() < minVelocity)
             {
                 velocity = new Vector2(0, 0);
             }
+
+
+            position = position * ScaleFactor;
+
+            
+
+
         }
 
 
@@ -65,7 +79,7 @@ namespace Prototype1
            // base.Draw(spriteBatch);
 
 
-            spriteBatch.Draw(texture, position, null, Color.White, ball.Rotation,
+            spriteBatch.Draw(texture, ball.GetPosition() / ScaleFactor, null, Color.White, ball.Rotation,
 
                                  new Vector2(texture.Width / 2f, texture.Height / 2f), 1, SpriteEffects.None,0);
 
