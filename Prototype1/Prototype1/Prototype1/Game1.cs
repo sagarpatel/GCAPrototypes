@@ -35,6 +35,7 @@ namespace Prototype1
 
         Texture2D bg1;
 
+        
 
         int max_points;
         int min_points;
@@ -52,6 +53,12 @@ namespace Prototype1
         World world;
 
         float ScaleFactor;
+
+
+
+        Song BGM1;
+
+
 
         public Game1()
         {
@@ -73,7 +80,7 @@ namespace Prototype1
 
 
             ScaleFactor = 0.01f;
-            
+
         }
 
 
@@ -112,12 +119,12 @@ namespace Prototype1
             target1.position = new Vector2(200, 50);
             target1.isAlive = true;
 
-            obz1 = new ObstacleObject(Content.Load<Texture2D>("Sprites/Brick_200x50"));
-            obz1.isAlive = false;
+          //  obz1 = new ObstacleObject(Content.Load<Texture2D>("Sprites/Brick_200x50_Side"));
+          //  obz1.isAlive = false;
 
             bg1 = Content.Load<Texture2D>("Sprites/Level_4");
 
-            
+            BGM1 = Content.Load<Song>("Audio/Curling_Mega_Sound_Track");
 
 
             world = new World(new Vector2(0, 0), true);
@@ -130,6 +137,8 @@ namespace Prototype1
 
             levelCount = 0;
             LoadLevel(0);
+
+            MediaPlayer.Play(BGM1);
 
         }
 
@@ -168,11 +177,13 @@ namespace Prototype1
                 //    this.Exit();
             }
 
-
-            if (obz1.isAlive)
+            if (levelCount > 1)
             {
-                obz1.UpdatePV();
-             //   obz1.HandlePlayerCollision(player1,gameTime);
+                if (obz1.isAlive)
+                {
+                    obz1.UpdatePV();
+                    //   obz1.HandlePlayerCollision(player1,gameTime);
+                }
             }
 
             HandleGameFlow();
@@ -207,9 +218,11 @@ namespace Prototype1
 
             target1.Draw(spriteBatch);
 
-           
-           obz1.DrawObz(spriteBatch,ScaleFactor);
-           // spriteBatch.DrawString(player1.scoreFont, player1.score.ToString(), player1.scorePosition, Color.Orchid);
+            if (levelCount > 1)
+            {
+                obz1.DrawObz(spriteBatch, ScaleFactor);
+            }
+               // spriteBatch.DrawString(player1.scoreFont, player1.score.ToString(), player1.scorePosition, Color.Orchid);
 
             spriteBatch.End();
 
@@ -297,8 +310,10 @@ namespace Prototype1
                         player1.score = 0;
                         player1.isScoring = false;
                         target1.isAlive = false;
-                        obz1.isAlive = false;
-
+                        if (levelCount > 1)
+                        {
+                          //  obz1.isAlive = false;
+                        }
                         LoadLevel(levelCount);
                     }
                 }
@@ -351,12 +366,12 @@ namespace Prototype1
                     target1.isInsideMe = false;
                     target1.isTouchingMe = false;
 
-                    obz1 = new ObstacleObject(Content.Load<Texture2D>("Sprites/Brick_200x50"));
+                    obz1 = new ObstacleObject(Content.Load<Texture2D>("Sprites/Brick_200x50_Side"));
                     obz1.isAlive = true;
 
                     obz1.wall = obz1.CreateWall(world, ScaleFactor);
             
-                    obz1.wall.Position  = new Vector2(200*ScaleFactor, 300*ScaleFactor);
+                    obz1.wall.Position  = new Vector2(200, 300)*ScaleFactor;
                     break; 
             }
 
@@ -368,49 +383,33 @@ namespace Prototype1
         {
 
             var grounDef = new BodyDef();
-
             grounDef.type = BodyType.Static;
 
             var groundFix = new FixtureDef();
-
             groundFix.restitution = 1.0f;
-
             groundFix.friction = 0.0f;
-
             groundFix.density = 0.0f;
 
             var groundShape = new PolygonShape();
-
             groundShape.SetAsEdge(new Vector2(0, 8), new Vector2(4.8f, 8.0f));
 
             var groundBody = world.CreateBody(grounDef);
-
             groundFix.shape = groundShape;
-
             groundBody.CreateFixture(groundFix);
-
             groundShape.SetAsEdge(new Vector2(0, 0), new Vector2(0f, 8.0f));
 
             var leftBody = world.CreateBody(grounDef);
-
             groundFix.shape = groundShape;
-
             leftBody.CreateFixture(groundFix);
-
             groundShape.SetAsEdge(new Vector2(4.8f, 0), new Vector2(4.8f, 8.0f));
 
             var rightBody = world.CreateBody(grounDef);
-
             groundFix.shape = groundShape;
-
             rightBody.CreateFixture(groundFix);
-
             groundShape.SetAsEdge(new Vector2(0, 0), new Vector2(4.8f, 0));
 
             var topBody = world.CreateBody(grounDef);
-
             groundFix.shape = groundShape;
-
             topBody.CreateFixture(groundFix);
 
         }

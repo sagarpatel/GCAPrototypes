@@ -121,6 +121,25 @@
       <Extra>C:\Users\Sagar\Documents\GameDev\CGAPrototypes\GCAPrototypes\Prototype1\Prototype1\Prototype1\bin\Windows Phone\Debug\Content\Audio\Bouncing_noise.wma</Extra>
       <Time>2011-03-13T16:28:13.045862-04:00</Time>
     </Item>
+    <Item>
+      <Source>Audio\Curling_Mega_Sound_Track.mp3</Source>
+      <Name>Audio\Curling_Mega_Sound_Track</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Sagar\Documents\GameDev\CGAPrototypes\GCAPrototypes\Prototype1\Prototype1\Prototype1\bin\Windows Phone\Debug\Content\Audio\Curling_Mega_Sound_Track.xnb</Output>
+      <Extra>C:\Users\Sagar\Documents\GameDev\CGAPrototypes\GCAPrototypes\Prototype1\Prototype1\Prototype1\bin\Windows Phone\Debug\Content\Audio\Curling_Mega_Sound_Track.wma</Extra>
+      <Time>2011-03-13T16:39:00.7859107-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\Brick_200x50_Side.png</Source>
+      <Name>Sprites\Brick_200x50_Side</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Sagar\Documents\GameDev\CGAPrototypes\GCAPrototypes\Prototype1\Prototype1\Prototype1\bin\Windows Phone\Debug\Content\Sprites\Brick_200x50_Side.xnb</Output>
+      <Time>2011-03-13T16:46:40.0361783-04:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>WindowsPhone</TargetPlatform>

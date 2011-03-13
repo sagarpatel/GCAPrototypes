@@ -89,8 +89,10 @@ namespace Prototype1
            
 
             if (isAlive)
-                spriteBatch.Draw(texture, wall.Position/ScaleFactor, null, Color.White, rotation, new Vector2(0, 0), scale, SpriteEffects.None, 0);
-            
+                spriteBatch.Draw(texture, wall.Position / ScaleFactor, null, Color.Silver, wall.Rotation,
+
+                                new Vector2(texture.Width / 2f, texture.Height / 2f), 1, SpriteEffects.None, 0);
+
         }
 
 
