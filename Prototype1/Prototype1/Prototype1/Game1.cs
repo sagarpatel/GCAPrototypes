@@ -57,7 +57,7 @@ namespace Prototype1
 
         float ScaleFactor;
 
-
+        SpriteFont totalscoreFont;
 
         Song BGM1;
 
@@ -131,6 +131,7 @@ namespace Prototype1
             bg4 = Content.Load<Texture2D>("Sprites/Level_4_Uversion");
             bg5 = Content.Load<Texture2D>("Sprites/Omega level");
 
+            totalscoreFont = Content.Load<SpriteFont>("Fonts/TotalscoreFont");
 
 
             BGM1 = Content.Load<Song>("Audio/Curling_Mega_Sound_Track");
@@ -247,7 +248,7 @@ namespace Prototype1
 
             player1.DrawPlayer(spriteBatch, ScaleFactor);
 
-            //spriteBatch.DrawString(player1.scoreFont, player1.isFlicked.ToString(), new Vector2(200,200), Color.Yellow);
+            spriteBatch.DrawString(totalscoreFont,  "Total Score: "+player1_scoreCount.ToString() , new Vector2(250,10), Color.NavajoWhite);
          //   player1.Draw(spriteBatch);
 
 

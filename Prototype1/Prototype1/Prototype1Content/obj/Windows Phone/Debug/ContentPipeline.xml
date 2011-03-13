@@ -203,6 +203,15 @@
       <Output>C:\Users\Sagar\Documents\GameDev\CGAPrototypes\GCAPrototypes\Prototype1\Prototype1\Prototype1\bin\Windows Phone\Debug\Content\Sprites\Brick_600x150_Up.xnb</Output>
       <Time>2011-03-13T17:35:08.1685139-04:00</Time>
     </Item>
+    <Item>
+      <Source>Fonts\TotalscoreFont.spritefont</Source>
+      <Name>Fonts\TotalscoreFont</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Sagar\Documents\GameDev\CGAPrototypes\GCAPrototypes\Prototype1\Prototype1\Prototype1\bin\Windows Phone\Debug\Content\Fonts\TotalscoreFont.xnb</Output>
+      <Time>2011-03-13T17:44:48.5157079-04:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>WindowsPhone</TargetPlatform>
