@@ -39,10 +39,10 @@ namespace Prototype1
             isScoring = false;
             scorePosition = new Vector2(position.X, position.Y + 20f);
             isFlicked = false;
-            minVelocity = 200f;
+            minVelocity = 50f;
            // radius = radius / 2;
 
-            speed = 0.1f;
+            speed = 0.2f;
         }
 
 
@@ -58,15 +58,20 @@ namespace Prototype1
 
 
             scorePosition = new Vector2(position.X + radius, position.Y - 50f);
-            if (velocity.Length() < minVelocity)
+
+            velocity = ball.GetLinearVelocity();
+            velocity -= friction * velocity;
+            
+            if ((velocity.Length() < minVelocity*ScaleFactor )&& isFlicked == true)
             {
                 velocity = new Vector2(0, 0);
+               // isFlicked = false;
             }
 
 
             position = position * ScaleFactor;
 
-            
+            ball.SetLinearVelocity ( velocity)  ;
 
 
         }
@@ -84,7 +89,7 @@ namespace Prototype1
                                  new Vector2(texture.Width / 2f, texture.Height / 2f), 1, SpriteEffects.None,0);
 
 
-            if(isFlicked)
+           // if(isFlicked)
                 spriteBatch.DrawString(scoreFont, score.ToString(), scorePosition, Color.Orchid);
         }
 

@@ -2,24 +2,6 @@
 <XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline">
   <Asset Type="Pipeline:BuildItemCollection">
     <Item>
-      <Source>Sprites\stone.png</Source>
-      <Name>Sprites\stone</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Sagar\Documents\GameDev\CGAPrototypes\GCAPrototypes\Prototype1\Prototype1\Prototype1\bin\Windows Phone\Debug\Content\Sprites\stone.xnb</Output>
-      <Time>2011-03-12T10:31:30.0483877-05:00</Time>
-    </Item>
-    <Item>
-      <Source>Sprites\stone_64.png</Source>
-      <Name>Sprites\stone_64</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Sagar\Documents\GameDev\CGAPrototypes\GCAPrototypes\Prototype1\Prototype1\Prototype1\bin\Windows Phone\Debug\Content\Sprites\stone_64.xnb</Output>
-      <Time>2011-03-12T10:34:09.9195319-05:00</Time>
-    </Item>
-    <Item>
       <Source>Fonts\player1scoreFont.spritefont</Source>
       <Name>Fonts\player1scoreFont</Name>
       <Importer>FontDescriptionImporter</Importer>
@@ -47,15 +29,6 @@
       <Time>2011-03-12T11:26:33.6233414-05:00</Time>
     </Item>
     <Item>
-      <Source>Sprites\over9000.png</Source>
-      <Name>Sprites\over9000</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Sagar\Documents\GameDev\CGAPrototypes\GCAPrototypes\Prototype1\Prototype1\Prototype1\bin\Windows Phone\Debug\Content\Sprites\over9000.xnb</Output>
-      <Time>2011-03-12T20:05:15.9639478-05:00</Time>
-    </Item>
-    <Item>
       <Source>Sprites\Brick_200x50.png</Source>
       <Name>Sprites\Brick_200x50</Name>
       <Importer>TextureImporter</Importer>
@@ -81,6 +54,72 @@
       <Options>None</Options>
       <Output>C:\Users\Sagar\Documents\GameDev\CGAPrototypes\GCAPrototypes\Prototype1\Prototype1\Prototype1\bin\Windows Phone\Debug\Content\Sprites\Level_4.xnb</Output>
       <Time>2011-03-12T22:47:31.0407623-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\Curling_ Ball_Blue_v2.png</Source>
+      <Name>Sprites\Curling_ Ball_Blue_v2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Sagar\Documents\GameDev\CGAPrototypes\GCAPrototypes\Prototype1\Prototype1\Prototype1\bin\Windows Phone\Debug\Content\Sprites\Curling_ Ball_Blue_v2.xnb</Output>
+      <Time>2011-03-13T15:39:45.6345676-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\Curling_ Ball_Green_64.png</Source>
+      <Name>Sprites\Curling_ Ball_Green_64</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Sagar\Documents\GameDev\CGAPrototypes\GCAPrototypes\Prototype1\Prototype1\Prototype1\bin\Windows Phone\Debug\Content\Sprites\Curling_ Ball_Green_64.xnb</Output>
+      <Time>2011-03-13T15:53:07.7484459-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\target_256.png</Source>
+      <Name>Sprites\target_256</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Sagar\Documents\GameDev\CGAPrototypes\GCAPrototypes\Prototype1\Prototype1\Prototype1\bin\Windows Phone\Debug\Content\Sprites\target_256.xnb</Output>
+      <Time>2011-03-13T16:23:03.5561603-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\target_256_green.png</Source>
+      <Name>Sprites\target_256_green</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Sagar\Documents\GameDev\CGAPrototypes\GCAPrototypes\Prototype1\Prototype1\Prototype1\bin\Windows Phone\Debug\Content\Sprites\target_256_green.xnb</Output>
+      <Time>2011-03-13T16:23:11.4926142-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Audio\Power_loss.mp3</Source>
+      <Name>Audio\Power_loss</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Sagar\Documents\GameDev\CGAPrototypes\GCAPrototypes\Prototype1\Prototype1\Prototype1\bin\Windows Phone\Debug\Content\Audio\Power_loss.xnb</Output>
+      <Extra>C:\Users\Sagar\Documents\GameDev\CGAPrototypes\GCAPrototypes\Prototype1\Prototype1\Prototype1\bin\Windows Phone\Debug\Content\Audio\Power_loss.wma</Extra>
+      <Time>2011-03-13T16:27:56.1408951-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Audio\Power_up.mp3</Source>
+      <Name>Audio\Power_up</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Sagar\Documents\GameDev\CGAPrototypes\GCAPrototypes\Prototype1\Prototype1\Prototype1\bin\Windows Phone\Debug\Content\Audio\Power_up.xnb</Output>
+      <Extra>C:\Users\Sagar\Documents\GameDev\CGAPrototypes\GCAPrototypes\Prototype1\Prototype1\Prototype1\bin\Windows Phone\Debug\Content\Audio\Power_up.wma</Extra>
+      <Time>2011-03-13T16:28:01.8662226-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Audio\Bouncing_noise.mp3</Source>
+      <Name>Audio\Bouncing_noise</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Sagar\Documents\GameDev\CGAPrototypes\GCAPrototypes\Prototype1\Prototype1\Prototype1\bin\Windows Phone\Debug\Content\Audio\Bouncing_noise.xnb</Output>
+      <Extra>C:\Users\Sagar\Documents\GameDev\CGAPrototypes\GCAPrototypes\Prototype1\Prototype1\Prototype1\bin\Windows Phone\Debug\Content\Audio\Bouncing_noise.wma</Extra>
+      <Time>2011-03-13T16:28:13.045862-04:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
