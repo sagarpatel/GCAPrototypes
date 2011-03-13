@@ -125,6 +125,8 @@ namespace Prototype1
             player1.ball =  player1.CreateBall(world, ScaleFactor);
            // player1.ball.Position = new Vector2(1, 1);
 
+            CreateGroundAndWalls();
+
             levelCount = 0;
             LoadLevel(0);
 
@@ -348,6 +350,60 @@ namespace Prototype1
             }
 
         }
+
+
+
+        private void CreateGroundAndWalls()
+        {
+
+            var grounDef = new BodyDef();
+
+            grounDef.type = BodyType.Static;
+
+            var groundFix = new FixtureDef();
+
+            groundFix.restitution = 1.0f;
+
+            groundFix.friction = 0.0f;
+
+            groundFix.density = 0.0f;
+
+            var groundShape = new PolygonShape();
+
+            groundShape.SetAsEdge(new Vector2(0, 8), new Vector2(4.8f, 8.0f));
+
+            var groundBody = world.CreateBody(grounDef);
+
+            groundFix.shape = groundShape;
+
+            groundBody.CreateFixture(groundFix);
+
+            groundShape.SetAsEdge(new Vector2(0, 0), new Vector2(0f, 8.0f));
+
+            var leftBody = world.CreateBody(grounDef);
+
+            groundFix.shape = groundShape;
+
+            leftBody.CreateFixture(groundFix);
+
+            groundShape.SetAsEdge(new Vector2(4.8f, 0), new Vector2(4.8f, 8.0f));
+
+            var rightBody = world.CreateBody(grounDef);
+
+            groundFix.shape = groundShape;
+
+            rightBody.CreateFixture(groundFix);
+
+            groundShape.SetAsEdge(new Vector2(0, 0), new Vector2(4.8f, 0));
+
+            var topBody = world.CreateBody(grounDef);
+
+            groundFix.shape = groundShape;
+
+            topBody.CreateFixture(groundFix);
+
+        }
+
 
 
     }
