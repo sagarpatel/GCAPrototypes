@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prototype1", "Prototype1\Pr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prototype1Content", "Prototype1\Prototype1Content\Prototype1Content.contentproj", "{AA65561B-3368-487E-B065-46866C9DD2E3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Box2D.XNA - wp7", "..\..\..\box2dxna-62331\Box2D.XNA\Box2D.XNA - wp7.csproj", "{066846BE-AAEA-4EB6-BAA8-2D6B60B3BDB3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Mixed Platforms = Debug|Mixed Platforms
@@ -37,6 +39,16 @@ Global
 		{AA65561B-3368-487E-B065-46866C9DD2E3}.Release|Mixed Platforms.ActiveCfg = Release|Windows Phone
 		{AA65561B-3368-487E-B065-46866C9DD2E3}.Release|Windows Phone.ActiveCfg = Release|Windows Phone
 		{AA65561B-3368-487E-B065-46866C9DD2E3}.Release|Xbox 360.ActiveCfg = Release|Windows Phone
+		{066846BE-AAEA-4EB6-BAA8-2D6B60B3BDB3}.Debug|Mixed Platforms.ActiveCfg = Debug|Windows Phone
+		{066846BE-AAEA-4EB6-BAA8-2D6B60B3BDB3}.Debug|Mixed Platforms.Build.0 = Debug|Windows Phone
+		{066846BE-AAEA-4EB6-BAA8-2D6B60B3BDB3}.Debug|Windows Phone.ActiveCfg = Debug|Windows Phone
+		{066846BE-AAEA-4EB6-BAA8-2D6B60B3BDB3}.Debug|Windows Phone.Build.0 = Debug|Windows Phone
+		{066846BE-AAEA-4EB6-BAA8-2D6B60B3BDB3}.Debug|Xbox 360.ActiveCfg = Debug|Windows Phone
+		{066846BE-AAEA-4EB6-BAA8-2D6B60B3BDB3}.Release|Mixed Platforms.ActiveCfg = Release|Windows Phone
+		{066846BE-AAEA-4EB6-BAA8-2D6B60B3BDB3}.Release|Mixed Platforms.Build.0 = Release|Windows Phone
+		{066846BE-AAEA-4EB6-BAA8-2D6B60B3BDB3}.Release|Windows Phone.ActiveCfg = Release|Windows Phone
+		{066846BE-AAEA-4EB6-BAA8-2D6B60B3BDB3}.Release|Windows Phone.Build.0 = Release|Windows Phone
+		{066846BE-AAEA-4EB6-BAA8-2D6B60B3BDB3}.Release|Xbox 360.ActiveCfg = Release|Windows Phone
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

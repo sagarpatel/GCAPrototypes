@@ -30,6 +30,8 @@ namespace Prototype1
 
         ObstacleObject obz1;
 
+        Texture2D bg1;
+
 
         int max_points;
         int min_points;
@@ -100,7 +102,9 @@ namespace Prototype1
             target1.isAlive = true;
 
             obz1 = new ObstacleObject(Content.Load<Texture2D>("Sprites/Brick_200x50"));
-            obz1.isAlive = false; 
+            obz1.isAlive = false;
+
+            bg1 = Content.Load<Texture2D>("Sprites/Level_4");
 
             levelCount = 0;
             LoadLevel(2);
@@ -163,6 +167,10 @@ namespace Prototype1
             // TODO: Add your drawing code here
 
             spriteBatch.Begin(SpriteSortMode.BackToFront, BlendState.AlphaBlend);
+
+           //priteBatch.Draw(bg1, new Vector2(0, 0), Color.White);
+            spriteBatch.Draw(bg1, new Vector2(0, 0), null, Color.White, 0f, new Vector2(0, 0), 0.5f, SpriteEffects.None,1f);
+
 
             player1.Draw(spriteBatch);
             target1.Draw(spriteBatch);
@@ -244,6 +252,7 @@ namespace Prototype1
                         player1.score = 0;
                         player1.isScoring = false;
                         target1.isAlive = false;
+                        obz1.isAlive = false;
 
                         LoadLevel(levelCount);
                     }

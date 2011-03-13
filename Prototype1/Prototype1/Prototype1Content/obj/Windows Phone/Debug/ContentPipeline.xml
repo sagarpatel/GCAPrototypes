@@ -73,6 +73,15 @@
       <Output>C:\Users\Sagar\Documents\GameDev\CGAPrototypes\GCAPrototypes\Prototype1\Prototype1\Prototype1\bin\Windows Phone\Debug\Content\Sprites\curling_ball.xnb</Output>
       <Time>2011-03-12T22:07:48.9345136-05:00</Time>
     </Item>
+    <Item>
+      <Source>Sprites\Level_4.png</Source>
+      <Name>Sprites\Level_4</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Sagar\Documents\GameDev\CGAPrototypes\GCAPrototypes\Prototype1\Prototype1\Prototype1\bin\Windows Phone\Debug\Content\Sprites\Level_4.xnb</Output>
+      <Time>2011-03-12T22:47:31.0407623-05:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>WindowsPhone</TargetPlatform>

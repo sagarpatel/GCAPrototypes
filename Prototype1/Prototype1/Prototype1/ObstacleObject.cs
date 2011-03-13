@@ -9,6 +9,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Input.Touch;
 using Microsoft.Xna.Framework.Media;
+using Box2D.XNA;
 
 namespace Prototype1
 {
@@ -49,21 +50,21 @@ namespace Prototype1
                     colDir.Normalize();
 
                     if (colDir.X > 0 && colDir.Y < 0)///Upper right
-                        if (Math.Abs(colDir.X) < Math.Abs(colDir.Y))
+                        if (Math.Abs(colDir.X) > Math.Abs(colDir.Y))
                             player.velocity.Y = -player.velocity.Y;
                         else
                             player.velocity.X = -player.velocity.X;
 
 
                     if (colDir.X > 0 && colDir.Y > 0)///Bottom right
-                        if (Math.Abs(colDir.X) < Math.Abs(colDir.Y))
+                        if (Math.Abs(colDir.X) > Math.Abs(colDir.Y))
                             player.velocity.Y = -player.velocity.Y;
                         else
                             player.velocity.X = -player.velocity.X;
 
 
                     if (colDir.X < 0 && colDir.Y < 0) ///Upper left
-                        if (Math.Abs(colDir.X) > Math.Abs(colDir.Y))
+                        if (Math.Abs(colDir.X) < Math.Abs(colDir.Y))
                             player.velocity.X = -player.velocity.X;
                         else
                             player.velocity.Y = -player.velocity.Y;

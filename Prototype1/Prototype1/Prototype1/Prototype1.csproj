@@ -109,6 +109,10 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\box2dxna-62331\Box2D.XNA\Box2D.XNA - wp7.csproj">
+      <Project>{066846BE-AAEA-4EB6-BAA8-2D6B60B3BDB3}</Project>
+      <Name>Box2D.XNA - wp7</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Prototype1Content\Prototype1Content.contentproj">
       <Name>Prototype1Content</Name>
       <XnaReferenceType>Content</XnaReferenceType>
