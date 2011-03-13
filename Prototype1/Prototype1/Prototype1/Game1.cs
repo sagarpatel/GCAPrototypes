@@ -32,10 +32,13 @@ namespace Prototype1
         TargetObject target1;
 
         ObstacleObject obz1;
+        ObstacleObject obz2;
 
         Texture2D bg1;
-
-        
+        Texture2D bg2;
+        Texture2D bg3;
+        Texture2D bg4;
+        Texture2D bg5;
 
         int max_points;
         int min_points;
@@ -114,8 +117,8 @@ namespace Prototype1
             
 
 
-            target1 = new TargetObject(Content.Load<Texture2D>("Sprites/target_256_green"));
-            target1.texOff = Content.Load<Texture2D>("Sprites/target_256");
+            target1 = new TargetObject(Content.Load<Texture2D>("Sprites/target_192_green"));
+            target1.texOff = Content.Load<Texture2D>("Sprites/target_192");
             target1.position = new Vector2(200, 50);
             target1.isAlive = true;
 
@@ -123,6 +126,12 @@ namespace Prototype1
           //  obz1.isAlive = false;
 
             bg1 = Content.Load<Texture2D>("Sprites/Level_4");
+            bg2 = Content.Load<Texture2D>("Sprites/Level_4_fire");
+            bg3 = Content.Load<Texture2D>("Sprites/Level_4_Multi_color");
+            bg4 = Content.Load<Texture2D>("Sprites/Level_4_Uversion");
+            bg5 = Content.Load<Texture2D>("Sprites/Omega level");
+
+
 
             BGM1 = Content.Load<Song>("Audio/Curling_Mega_Sound_Track");
 
@@ -177,14 +186,14 @@ namespace Prototype1
                 //    this.Exit();
             }
 
-            if (levelCount > 1)
-            {
-                if (obz1.isAlive)
-                {
-                    obz1.UpdatePV();
-                    //   obz1.HandlePlayerCollision(player1,gameTime);
-                }
-            }
+            //if (levelCount > 1)
+            //{
+            //    if (obz1.isAlive)
+            //    {
+            //      //  obz1.UpdatePV();
+            //        //   obz1.HandlePlayerCollision(player1,gameTime);
+            //    }
+            //}
 
             HandleGameFlow();
 
@@ -205,10 +214,36 @@ namespace Prototype1
             spriteBatch.Begin(SpriteSortMode.BackToFront, BlendState.AlphaBlend);
 
            //priteBatch.Draw(bg1, new Vector2(0, 0), Color.White);
-         
-            
-            spriteBatch.Draw(bg1, new Vector2(0, 0), null, Color.White, 0f, new Vector2(0, 0), 0.5f, SpriteEffects.None,1f);
 
+            switch (levelCount)
+            {
+                case (0):
+                    spriteBatch.Draw(bg1, new Vector2(0, 0), null, Color.White, 0f, new Vector2(0, 0), 0.5f, SpriteEffects.None, 1f);
+                    break;
+
+                case (1):
+                    spriteBatch.Draw(bg1, new Vector2(0, 0), null, Color.White, 0f, new Vector2(0, 0), 0.5f, SpriteEffects.None, 1f);
+                    break;
+
+                case (2):
+                    spriteBatch.Draw(bg2, new Vector2(0, 0), null, Color.White, 0f, new Vector2(0, 0), 1f, SpriteEffects.None, 1f);
+                    break;
+
+                case (3):
+                    spriteBatch.Draw(bg3, new Vector2(0, 0), null, Color.White, 0f, new Vector2(0, 0), 1f, SpriteEffects.None, 1f);
+                    break;
+
+                case (4):
+                    spriteBatch.Draw(bg4, new Vector2(0, 0), null, Color.White, 0f, new Vector2(0, 0), 1f, SpriteEffects.None, 1f);
+                    break;
+
+                case (5):
+                    spriteBatch.Draw(bg5, new Vector2(0, 0), null, Color.White, 0f, new Vector2(0, 0), 0.5f, SpriteEffects.None, 1f);
+                    break;
+            }
+
+
+        
 
             player1.DrawPlayer(spriteBatch, ScaleFactor);
 
@@ -218,10 +253,16 @@ namespace Prototype1
 
             target1.Draw(spriteBatch);
 
-            if (levelCount > 1)
+            if (levelCount == 2)
             {
                 obz1.DrawObz(spriteBatch, ScaleFactor);
             }
+
+            if (levelCount == 3)
+            {
+                obz2.DrawObz(spriteBatch, ScaleFactor);
+            }
+
                // spriteBatch.DrawString(player1.scoreFont, player1.score.ToString(), player1.scorePosition, Color.Orchid);
 
             spriteBatch.End();
@@ -330,29 +371,44 @@ namespace Prototype1
             {
 
                 case (0):
+
                     player1.isScoring = false;
                     player1.score = 0;
-                   // player1.position = new Vector2(200, 700);
-                    player1.ball.Position = new Vector2(2, 7);
+                    player1.ball.Position = new Vector2(320, 720) * ScaleFactor;
+                    target1.position = new Vector2(50, 50);
                     player1.isFlicked = false;
 
-                    target1.position = new Vector2(200, 50);
                     target1.isAlive = true;
                     target1.isInsideMe = false;
                     target1.isTouchingMe = false;
+
+                   
+
+
+
                     break;
 
 
                 case(1):
-                    player1.isScoring = false;
+
+                     player1.isScoring = false;
                     player1.score = 0;
-                    player1.ball.Position = new Vector2(320, 720) * ScaleFactor;
-                    target1.position = new Vector2(0, 0);
+                   // player1.position = new Vector2(200, 700);
+                    player1.ball.Position = new Vector2(400, 50)*ScaleFactor;
+ 
+
                     player1.isFlicked = false;
 
+                    target1.position = new Vector2(50, 600);
                     target1.isAlive = true;
                     target1.isInsideMe = false;
                     target1.isTouchingMe = false;
+                    
+
+
+
+
+
                     break;
 
                 case (2):
@@ -370,9 +426,34 @@ namespace Prototype1
                     obz1.isAlive = true;
 
                     obz1.wall = obz1.CreateWall(world, ScaleFactor);
-            
-                    obz1.wall.Position  = new Vector2(200, 300)*ScaleFactor;
+                    obz1.wall.Position  = new Vector2(200, 600)*ScaleFactor;
+                    break;
+
+
+                case (3):
+                    player1.isScoring = false;
+                    player1.score = 0;
+                    player1.ball.Position = new Vector2(10, 400) * ScaleFactor;
+                    target1.position = new Vector2(300, 700);
+                    player1.isFlicked = false;
+
+                    target1.isAlive = true;
+                    target1.isInsideMe = false;
+                    target1.isTouchingMe = false;
+                    target1.position = new Vector2(300, 500);
+
+                   //world.DestroyBody(obz1.wall);
+
+                    obz2 = new ObstacleObject(Content.Load<Texture2D>("Sprites/Brick_600x150_Up"));
+                    obz2.isAlive = true;
+
+                    obz2.wall = obz2.CreateWall(world, ScaleFactor);
+                    obz2.wall.Position = new Vector2(200, 400) * ScaleFactor;
                     break; 
+
+                case(4):
+                    this.Exit();
+                    break;
             }
 
         }
