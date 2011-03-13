@@ -89,7 +89,7 @@ namespace Prototype1
             
             // TODO: use this.Content to load your game content here
 
-            player1 = new PlayerObject(Content.Load<Texture2D>("Sprites/stone_64"));
+            player1 = new PlayerObject(Content.Load<Texture2D>("Sprites/curling_ball"));
             player1.scoreFont = Content.Load<SpriteFont>("Fonts/player1scoreFont");
             player1.position = new Vector2(200, 700);
             player1.isAlive = true;
@@ -99,7 +99,7 @@ namespace Prototype1
             target1.position = new Vector2(200, 50);
             target1.isAlive = true;
 
-            obz1 = new ObstacleObject(Content.Load<Texture2D>("Sprites/over9000"));
+            obz1 = new ObstacleObject(Content.Load<Texture2D>("Sprites/Brick_200x50"));
             obz1.isAlive = false; 
 
             levelCount = 0;
@@ -294,7 +294,7 @@ namespace Prototype1
                     target1.isTouchingMe = false;
 
                     obz1.isAlive = true;
-                    obz1.position = new Vector2(200, 500);
+                    obz1.position = new Vector2(200, 300);
                     break; 
             }
 

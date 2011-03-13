@@ -55,6 +55,24 @@
       <Output>C:\Users\Sagar\Documents\GameDev\CGAPrototypes\GCAPrototypes\Prototype1\Prototype1\Prototype1\bin\Windows Phone\Debug\Content\Sprites\over9000.xnb</Output>
       <Time>2011-03-12T20:05:15.9639478-05:00</Time>
     </Item>
+    <Item>
+      <Source>Sprites\Brick_200x50.png</Source>
+      <Name>Sprites\Brick_200x50</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Sagar\Documents\GameDev\CGAPrototypes\GCAPrototypes\Prototype1\Prototype1\Prototype1\bin\Windows Phone\Debug\Content\Sprites\Brick_200x50.xnb</Output>
+      <Time>2011-03-12T21:58:11.6264935-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\curling_ball.png</Source>
+      <Name>Sprites\curling_ball</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Sagar\Documents\GameDev\CGAPrototypes\GCAPrototypes\Prototype1\Prototype1\Prototype1\bin\Windows Phone\Debug\Content\Sprites\curling_ball.xnb</Output>
+      <Time>2011-03-12T22:07:48.9345136-05:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>WindowsPhone</TargetPlatform>
