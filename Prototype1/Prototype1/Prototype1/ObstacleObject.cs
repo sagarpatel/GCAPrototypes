@@ -49,14 +49,30 @@ namespace Prototype1
                     colDir.Normalize();
 
                     if (colDir.X > 0 && colDir.Y < 0)///Upper right
-                        player.velocity.Y = -player.velocity.Y;
+                        if (Math.Abs(colDir.X) < Math.Abs(colDir.Y))
+                            player.velocity.Y = -player.velocity.Y;
+                        else
+                            player.velocity.X = -player.velocity.X;
+
+
                     if (colDir.X > 0 && colDir.Y > 0)///Bottom right
-                        player.velocity.Y = -player.velocity.Y;
+                        if (Math.Abs(colDir.X) < Math.Abs(colDir.Y))
+                            player.velocity.Y = -player.velocity.Y;
+                        else
+                            player.velocity.X = -player.velocity.X;
+
 
                     if (colDir.X < 0 && colDir.Y < 0) ///Upper left
-                        player.velocity.X = -player.velocity.X;
+                        if (Math.Abs(colDir.X) > Math.Abs(colDir.Y))
+                            player.velocity.X = -player.velocity.X;
+                        else
+                            player.velocity.Y = -player.velocity.Y;
+
                     if (colDir.X < 0 && colDir.Y > 0) /// Bottom left
-                        player.velocity.X = -player.velocity.X;
+                        if (Math.Abs(colDir.X) > Math.Abs(colDir.Y))
+                            player.velocity.X = -player.velocity.X;
+                        else
+                            player.velocity.Y = -player.velocity.Y;
 
                 }
             }
