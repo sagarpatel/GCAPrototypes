@@ -1,0 +1,41 @@
+C:\Users\Sagar\Documents\GameDev\CGAPrototypes\GCAPrototypes\Prototype1\Prototype1\Prototype1\bin\Windows Phone\Release\Content\Fonts\player1scoreFont.xnb
+C:\Users\Sagar\Documents\GameDev\CGAPrototypes\GCAPrototypes\Prototype1\Prototype1\Prototype1\bin\Windows Phone\Release\Content\Fonts\TotalscoreFont.xnb
+C:\Users\Sagar\Documents\GameDev\CGAPrototypes\GCAPrototypes\Prototype1\Prototype1\Prototype1\bin\Windows Phone\Release\Content\Sprites\target_128_green.xnb
+C:\Users\Sagar\Documents\GameDev\CGAPrototypes\GCAPrototypes\Prototype1\Prototype1\Prototype1\bin\Windows Phone\Release\Content\Sprites\target_128.xnb
+C:\Users\Sagar\Documents\GameDev\CGAPrototypes\GCAPrototypes\Prototype1\Prototype1\Prototype1\bin\Windows Phone\Release\Content\Sprites\Brick_200x50.xnb
+C:\Users\Sagar\Documents\GameDev\CGAPrototypes\GCAPrototypes\Prototype1\Prototype1\Prototype1\bin\Windows Phone\Release\Content\Sprites\curling_ball.xnb
+C:\Users\Sagar\Documents\GameDev\CGAPrototypes\GCAPrototypes\Prototype1\Prototype1\Prototype1\bin\Windows Phone\Release\Content\Sprites\Level_4.xnb
+C:\Users\Sagar\Documents\GameDev\CGAPrototypes\GCAPrototypes\Prototype1\Prototype1\Prototype1\bin\Windows Phone\Release\Content\Sprites\Curling_ Ball_Blue_v2.xnb
+C:\Users\Sagar\Documents\GameDev\CGAPrototypes\GCAPrototypes\Prototype1\Prototype1\Prototype1\bin\Windows Phone\Release\Content\Sprites\Curling_ Ball_Green_64.xnb
+C:\Users\Sagar\Documents\GameDev\CGAPrototypes\GCAPrototypes\Prototype1\Prototype1\Prototype1\bin\Windows Phone\Release\Content\Sprites\target_256.xnb
+C:\Users\Sagar\Documents\GameDev\CGAPrototypes\GCAPrototypes\Prototype1\Prototype1\Prototype1\bin\Windows Phone\Release\Content\Sprites\target_256_green.xnb
+C:\Users\Sagar\Documents\GameDev\CGAPrototypes\GCAPrototypes\Prototype1\Prototype1\Prototype1\bin\Windows Phone\Release\Content\Sprites\Brick_200x50_Side.xnb
+C:\Users\Sagar\Documents\GameDev\CGAPrototypes\GCAPrototypes\Prototype1\Prototype1\Prototype1\bin\Windows Phone\Release\Content\Sprites\Level_4_fire.xnb
+C:\Users\Sagar\Documents\GameDev\CGAPrototypes\GCAPrototypes\Prototype1\Prototype1\Prototype1\bin\Windows Phone\Release\Content\Sprites\level_4_Multi_color.xnb
+C:\Users\Sagar\Documents\GameDev\CGAPrototypes\GCAPrototypes\Prototype1\Prototype1\Prototype1\bin\Windows Phone\Release\Content\Sprites\level_4_Uversion.xnb
+C:\Users\Sagar\Documents\GameDev\CGAPrototypes\GCAPrototypes\Prototype1\Prototype1\Prototype1\bin\Windows Phone\Release\Content\Sprites\Omega level.xnb
+C:\Users\Sagar\Documents\GameDev\CGAPrototypes\GCAPrototypes\Prototype1\Prototype1\Prototype1\bin\Windows Phone\Release\Content\Sprites\target_192.xnb
+C:\Users\Sagar\Documents\GameDev\CGAPrototypes\GCAPrototypes\Prototype1\Prototype1\Prototype1\bin\Windows Phone\Release\Content\Sprites\target_192_green.xnb
+C:\Users\Sagar\Documents\GameDev\CGAPrototypes\GCAPrototypes\Prototype1\Prototype1\Prototype1\bin\Windows Phone\Release\Content\Sprites\Brick_600x150_Up.xnb
+C:\Users\Sagar\Documents\GameDev\CGAPrototypes\GCAPrototypes\Prototype1\Prototype1\Prototype1\bin\Windows Phone\Release\Content\Audio\Power_loss.xnb
+C:\Users\Sagar\Documents\GameDev\CGAPrototypes\GCAPrototypes\Prototype1\Prototype1\Prototype1\bin\Windows Phone\Release\Content\Audio\Power_up.xnb
+C:\Users\Sagar\Documents\GameDev\CGAPrototypes\GCAPrototypes\Prototype1\Prototype1\Prototype1\bin\Windows Phone\Release\Content\Audio\Bouncing_noise.xnb
+C:\Users\Sagar\Documents\GameDev\CGAPrototypes\GCAPrototypes\Prototype1\Prototype1\Prototype1\bin\Windows Phone\Release\Content\Audio\Curling_Mega_Sound_Track.xnb
+C:\Users\Sagar\Documents\GameDev\CGAPrototypes\GCAPrototypes\Prototype1\Prototype1\Prototype1\bin\Windows Phone\Release\Content\Audio\Power_loss.wma
+C:\Users\Sagar\Documents\GameDev\CGAPrototypes\GCAPrototypes\Prototype1\Prototype1\Prototype1\bin\Windows Phone\Release\Content\Audio\Power_up.wma
+C:\Users\Sagar\Documents\GameDev\CGAPrototypes\GCAPrototypes\Prototype1\Prototype1\Prototype1\bin\Windows Phone\Release\Content\Audio\Bouncing_noise.wma
+C:\Users\Sagar\Documents\GameDev\CGAPrototypes\GCAPrototypes\Prototype1\Prototype1\Prototype1\bin\Windows Phone\Release\Content\Audio\Curling_Mega_Sound_Track.wma
+C:\Users\Sagar\Documents\GameDev\CGAPrototypes\GCAPrototypes\Prototype1\Prototype1\Prototype1\bin\Windows Phone\Release\Prototype1.dll
+C:\Users\Sagar\Documents\GameDev\CGAPrototypes\GCAPrototypes\Prototype1\Prototype1\Prototype1\bin\Windows Phone\Release\Prototype1.pdb
+C:\Users\Sagar\Documents\GameDev\CGAPrototypes\GCAPrototypes\Prototype1\Prototype1\Prototype1\bin\Windows Phone\Release\Box2D.XNA.dll
+C:\Users\Sagar\Documents\GameDev\CGAPrototypes\GCAPrototypes\Prototype1\Prototype1\Prototype1\bin\Windows Phone\Release\Box2D.XNA.pdb
+C:\Users\Sagar\Documents\GameDev\CGAPrototypes\GCAPrototypes\Prototype1\Prototype1\Prototype1\obj\Windows Phone\Release\ResolveAssemblyReference.cache
+C:\Users\Sagar\Documents\GameDev\CGAPrototypes\GCAPrototypes\Prototype1\Prototype1\Prototype1\obj\Windows Phone\Release\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Sagar\Documents\GameDev\CGAPrototypes\GCAPrototypes\Prototype1\Prototype1\Prototype1\obj\Windows Phone\Release\Prototype1.dll
+C:\Users\Sagar\Documents\GameDev\CGAPrototypes\GCAPrototypes\Prototype1\Prototype1\Prototype1\obj\Windows Phone\Release\Prototype1.pdb
+C:\Users\Sagar\Documents\GameDev\CGAPrototypes\GCAPrototypes\Prototype1\Prototype1\Prototype1\bin\Windows Phone\Release\AppManifest.xaml
+C:\Users\Sagar\Documents\GameDev\CGAPrototypes\GCAPrototypes\Prototype1\Prototype1\Prototype1\obj\Windows Phone\Release\WMAppManifest.xml.g
+C:\Users\Sagar\Documents\GameDev\CGAPrototypes\GCAPrototypes\Prototype1\Prototype1\Prototype1\obj\Windows Phone\Release\WMAppManifest.xml
+bin\Windows Phone\Release\GameThumbnail.png
+C:\Users\Sagar\Documents\GameDev\CGAPrototypes\GCAPrototypes\Prototype1\Prototype1\Prototype1\bin\Windows Phone\Release\Prototype1.xap
+C:\Users\Sagar\Documents\GameDev\CGAPrototypes\GCAPrototypes\Prototype1\Prototype1\Prototype1\obj\Windows Phone\Release\XapCacheFile.xml

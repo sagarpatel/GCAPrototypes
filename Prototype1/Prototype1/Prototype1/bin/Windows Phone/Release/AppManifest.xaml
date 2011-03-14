@@ -1,0 +1,6 @@
+﻿<Deployment xmlns="http://schemas.microsoft.com/client/2007/deployment" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" EntryPointAssembly="Prototype1" EntryPointType="Prototype1.Game1" RuntimeVersion="3.0">
+  <Deployment.Parts>
+    <AssemblyPart x:Name="Prototype1" Source="Prototype1.dll" />
+    <AssemblyPart x:Name="Box2D.XNA" Source="Box2D.XNA.dll" />
+  </Deployment.Parts>
+</Deployment>

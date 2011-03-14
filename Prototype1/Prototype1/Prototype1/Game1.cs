@@ -149,7 +149,7 @@ namespace Prototype1
             LoadLevel(0);
 
             MediaPlayer.Play(BGM1);
-
+            
         }
 
 

@@ -1,0 +1,27 @@
+Content\Fonts\player1scoreFont.xnb
+Content\Sprites\target_128_green.xnb
+Content\Sprites\target_128.xnb
+Content\Sprites\Brick_200x50.xnb
+Content\Sprites\curling_ball.xnb
+Content\Sprites\Level_4.xnb
+Content\Sprites\Curling_ Ball_Blue_v2.xnb
+Content\Sprites\Curling_ Ball_Green_64.xnb
+Content\Sprites\target_256.xnb
+Content\Sprites\target_256_green.xnb
+Content\Audio\Power_loss.xnb
+Content\Audio\Power_loss.wma
+Content\Audio\Power_up.xnb
+Content\Audio\Power_up.wma
+Content\Audio\Bouncing_noise.xnb
+Content\Audio\Bouncing_noise.wma
+Content\Audio\Curling_Mega_Sound_Track.xnb
+Content\Audio\Curling_Mega_Sound_Track.wma
+Content\Sprites\Brick_200x50_Side.xnb
+Content\Sprites\Level_4_fire.xnb
+Content\Sprites\level_4_Multi_color.xnb
+Content\Sprites\level_4_Uversion.xnb
+Content\Sprites\Omega level.xnb
+Content\Sprites\target_192.xnb
+Content\Sprites\target_192_green.xnb
+Content\Sprites\Brick_600x150_Up.xnb
+Content\Fonts\TotalscoreFont.xnb
